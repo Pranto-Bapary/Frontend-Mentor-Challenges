@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <main class="main">
+    <img src="images/logo.svg" alt="logo" class="logo">
+    <h2 class="heading">We are launching <span>soon!</span></h2>
+    <p class="description">Subscribe and get notified</p>
+    <form class="form">
+      <div class="form-input">
+        <input type="email" class="input-form" placeholder="Your email address">
+        <button type="submit" class="btn" onclick="return validate()">Notify Me</button>
+        <span class="error-message"></span>
+      </div>
+    </form>
+    <img src="images/illustration-dashboard.png" alt="dashboard" class="dashboard">
+  </main>
+
+  <footer class="footer">
+    <div class="footer-social">
+      <ul>
+        <li><a href="https://facebook.com/ashfe.pranto" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com/ashfepranto" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://instagram.com/ashfe.pranto" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <p>&copy; Copyright Ping. All rights reserved.</p>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

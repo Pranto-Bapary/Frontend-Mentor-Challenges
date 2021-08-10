@@ -1,0 +1,323 @@
+/*--------------
+ Google Font 
+ -------------*/
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+/*------------
+ Variables 
+ ----------*/
+:root {
+  --xdkmagenta: hsl(300, 43%, 22%);
+  --dkgr-magenta: hsl(303, 10%, 53%);
+  --light-gr-magenta: hsl(300, 24%, 96%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+/*----------------
+ Main Section 
+ --------------*/
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.main::before,
+.main::after {
+  height: 100vh;
+  width: 75%;
+  position: absolute;
+  content: "";
+}
+
+.main::before {
+  background: url("../images/bg-pattern-top-desktop.svg") no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.main::after {
+  background: url("../images/bg-pattern-bottom-desktop.svg") no-repeat;
+  bottom: 0;
+  right: 0%;
+}
+
+/*-------------
+ Wrapper 
+ ----------*/
+.wrapper {
+  max-width: 1100px;
+  min-height: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/*----------------
+ Review Wrapper 
+ --------------*/
+.review-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+/*--------------------
+ Review Wrapper Left
+ ------------------*/
+.review-wrapper-left h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--xdkmagenta);
+  line-height: 48px;
+}
+
+.review-wrapper-left p {
+  margin-top: 15px;
+  line-height: 25px;
+  color: var(--dkgr-magenta);
+  font-weight: 400;
+}
+
+/*---------------------
+ Review Wrapper Right
+ -------------------*/
+.review-wrapper-right .review-single {
+  height: 52px;
+  width: 81.3%;
+  background: var(--light-gr-magenta);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.review-wrapper-right .review-single:nth-child(2) {
+  margin-left: 47px;
+}
+
+.review-wrapper-right .review-single:nth-child(3) {
+  margin-left: 94px;
+}
+
+/*--------------
+ Star Icons 
+ ------------*/
+.review-wrapper-right .review-single .icons {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.review-wrapper-right .review-single .icons .star {
+  margin-right: 5px;
+}
+
+.review-wrapper-right .review-single h4 {
+  font-size: 0.87rem;
+  color: var(--xdkmagenta);
+}
+
+/*---------------
+ Card Wrapper 
+ -------------*/
+.review-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+/*---------------
+ Review Card
+ -------------*/
+.review-card {
+  width: 100%;
+  height: 250px;
+  padding: 35px 30px;
+  background: var(--xdkmagenta);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.review-card:nth-child(2) {
+  margin-top: 15px;
+}
+.review-card:nth-child(3) {
+  margin-top: 30px;
+}
+
+/*-------------
+ Card Inner 
+ -----------*/
+.review-card-inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-img {
+  height: 45px;
+  width: 45px;
+  margin-right: 20px;
+}
+
+.card-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card-title {
+  color: var(--white);
+  font-size: 0.87rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.card-subtitle {
+  color: var(--dkgr-magenta);
+  font-size: 0.87rem;
+  font-weight: 400;
+}
+
+.card-description {
+  color: var(--white);
+  font-size: 0.8rem;
+  line-height: 22px;
+}
+
+/*------------------
+ Responsive Area 
+ ---------------*/
+
+/* --------------------------------Viewport width is less than or equal to 991px------------------------------- */
+@media screen and (max-width: 991px) {
+  .wrapper {
+    max-width: 810px;
+  }
+
+  .review-wrapper-right .review-single {
+    width: 75%;
+  }
+
+  .review-wrapper-right .review-single .icons .star {
+    margin-right: 3px;
+  }
+
+  .review-wrapper-right .review-single h4 {
+    font-size: 0.75rem;
+    color: var(--xdkmagenta);
+  }
+
+  .review-card {
+    height: 280px;
+  }
+}
+/* ----------x---------------------Viewport width is less than or equal to 991px-------------x----------------- */
+
+/* --------------------------------Viewport width is less than or equal to 767px------------------------------- */
+@media screen and (max-width: 767px) {
+  .wrapper {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .review-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .review-wrapper-left h2 {
+    font-size: 1.9rem;
+    line-height: 37px;
+    padding: 0 20px;
+  }
+
+  .review-wrapper-right .review-single {
+    width: 100%;
+    flex-direction: column;
+    padding: 38px 0;
+  }
+
+  .review-wrapper-right .review-single:nth-child(2),
+  .review-wrapper-right .review-single:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .review-wrapper-right .review-single h4 {
+    font-size: 0.9rem;
+  }
+
+  .review-wrapper-right .review-single .icons {
+    display: inline-block;
+    padding: 0px 20px;
+    margin-bottom: 8px;
+  }
+
+  .review-card-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1rem;
+  }
+
+  .review-card {
+    width: 100%;
+    height: 250px;
+  }
+
+  .review-card:nth-child(2),
+  .review-card:nth-child(3) {
+    margin-top: 0;
+  }
+}
+/* ----------x---------------------Viewport width is less than or equal to 767px-------------x----------------- */
+
+/* --------------------------------Viewport width is less than or equal to 576px------------------------------- */
+@media screen and (max-width: 576px) {
+  .main::before,
+  .main::after {
+    width: 100%;
+  }
+
+  .main::before {
+    background: url("../images/bg-pattern-top-mobile.svg") no-repeat;
+    top: -24px;
+  }
+
+  .main::after {
+    background: url("../images/bg-pattern-bottom-mobile.svg") no-repeat;
+    bottom: -98%;
+  }
+
+  .review-card-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+/* ----------x---------------------Viewport width is less than or equal to 576px-------------x----------------- */
