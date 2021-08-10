@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Pranto-Bapary/tip-calculator)
-- Live Site URL: [Github Pages](https://pranto-bapary.github.io/tip-calculator/)
+- Live Site URL: [Netlify](https://prantos-tip-calculator.netlify.app/)
 
 ### Built with
 
