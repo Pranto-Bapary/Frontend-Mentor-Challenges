@@ -1,0 +1,177 @@
+/*--------------
+Google Fonts
+-------------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/*-----------------
+ Color Variables 
+ ---------------*/
+:root {
+  --inter-font: "Inter", sans-serif;
+  --lexend-font: "Lexend Deca", sans-serif;
+
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stats-paragraph: hsla(0, 0%, 100%, 0.6);
+  --white: #fff;
+}
+
+/*--------------
+ Basic Reset 
+ ------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--main-background);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--inter-font);
+  font-weight: 700;
+}
+
+/*--------------
+ Container
+ ------------*/
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin:auto;
+  overflow: hidden;
+}
+
+.card-wrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    border-radius: 10px;
+}
+
+/*-------------------
+  Card Wrapper Left 
+  -----------------*/
+.card-wrapper-left {
+  background: var(--card-background);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-wrapper-left h3 {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.card-wrapper-left h3 span {
+  color: var(--soft-violet);
+}
+
+.card-wrapper-left p {
+  font-family: var(--lexend-font);
+  font-size: .9rem;
+  font-weight: 400;
+  color: var(--main-paragraph);
+  line-height: 25px;
+}
+
+.inner-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+
+.content h4{
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.content{
+    margin-top: 4rem;
+}
+
+.content span{
+    font-family: var(--lexend-font);
+    font-size: .76rem;
+    color: var(--stats-paragraph);
+    text-transform: uppercase;
+    letter-spacing: 1.2px
+}
+
+/*-------------------
+  Card Wrapper Right 
+  -----------------*/
+  .card-wrapper-right{
+      width: 100%;
+  }
+
+  .card-img{
+      width: 100%;
+      position: relative;
+  }
+
+  .card-img img{
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+
+  .overlay{
+      position: absolute;
+      content: '';
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      opacity: .5;
+      background-color: var(--soft-violet);
+  }
+
+  @media screen and (max-width:991px){
+    .card-wrapper {
+        grid-template-columns: repeat(1, minmax(0,1fr));
+        text-align: center;
+        max-width: 500px;
+        padding: 5rem 13px;
+    }
+
+    .card-img img{
+      max-width: 500px;
+    }
+
+    .card-wrapper-left{
+        order: 2;
+    }
+
+    .card-wrapper-right{
+        order: 1;
+    }
+  }
+
+  @media screen and (max-width:650px){
+    .inner-wrapper {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+
+    .content {
+        margin-top: 2rem;
+    }
+  }
