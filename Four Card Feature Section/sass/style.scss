@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import "./reset";
+@import "./variables";
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $very-light-gray;
+}
+
+
+/*----------------
+Wrapper Start
+---------------*/
+.wrapper {
+    min-height: 100vh;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 20px;
+
+
+
+    /*------------------
+    Text Wrapper Start
+    ------------------*/
+
+    .text-wrapper {
+        text-align: center;
+        width: 500px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .title-light {
+            font-weight: 200;
+            color: $very-dark-blue;
+        }
+
+        .title-bold {
+            font-weight: 600;
+            color: $very-dark-blue;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            color: $grayish-blue;
+        }
+    }
+
+
+    /*--------x---------
+    Text Wrapper End
+    ---------x--------*/
+
+
+    /*-------------------
+    Card Wrapper Start
+    -------------------*/
+    .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        grid-gap: 30px;
+
+        /*-----------
+        Card Start
+        -----------*/
+        .card {
+            min-height: 230px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            border-radius: .35rem;
+            box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            transform: translateY(0px);
+            scroll-behavior: smooth;
+
+            .card-text {
+                .card-title {
+                    font-size: 1.2rem;
+                    color: $very-dark-blue;
+                    margin-bottom: 10px;
+                }
+
+                .card-description {
+                    font-size: .9rem;
+                    font-weight: 400;
+                    color: $grayish-blue;
+                }
+            }
+
+            .card-image {
+                text-align: right;
+            }
+        }
+
+        .card:hover{
+            transform: translateY(-5px);
+        }
+
+        /*----x----
+        Card End
+        -----x---*/
+
+
+
+        .card-cyan {
+            border-color: $cyan;
+
+        }
+
+        .card-red {
+            border-color: $red;
+
+        }
+
+        .card-orange {
+            border-color: $orange;
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .card-blue {
+            border-color: $blue;
+        }
+
+        .card-cyan,
+        .card-blue {
+            position: relative;
+            top: 50%;
+        }
+    }
+
+    /*--------x---------
+    Card Wrapper End
+    ---------x--------*/
+}
+
+/*------x------
+Wrapper End
+-------x-----*/
+
+
+
+
+
+
+/*---------------------
+Responsive Area Start
+---------------------*/
+@media screen and (max-width:991px) {
+    .wrapper {
+        max-width: 900px;
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .wrapper {
+        .card-wrapper {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+            padding: 0 2%;
+
+            .card-cyan,
+            .card-blue {
+                top: 0;
+            }
+
+            .card-orange {
+                grid-column: 1/2;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width:767px) {
+    .wrapper {
+        .text-wrapper {
+            width: 100%;
+            padding: 0 2%;
+        }
+
+        .card-wrapper {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+
+            .card-orange {
+                grid-row: 3/4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:420px) {
+    .wrapper {
+        .card-wrapper {
+            grid-gap: 25px;
+        }
+
+        .text-wrapper {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:330px) {
+    .wrapper {
+        .text-wrapper {
+            h2 {
+                font-size: 1.45rem;
+            }
+        }
+    }
+}
+
+/*---------x----------
+Responsive Area End
+----------x---------*/

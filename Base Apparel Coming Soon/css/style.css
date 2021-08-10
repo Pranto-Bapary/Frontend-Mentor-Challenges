@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: url("../images/bg-pattern-desktop.svg") no-repeat;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .6fr .4fr;
+      grid-template-columns: .6fr .4fr;
+}
+
+.container .col-left {
+  width: 650px;
+  padding: 0;
+  padding-left: 5rem;
+  padding-right: 8rem;
+}
+
+.container .col-left .logo {
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+  cursor: pointer;
+}
+
+.container .col-left .bg-mobile {
+  display: none;
+}
+
+.container .col-left .title h2 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+
+.container .col-left .title .title-light {
+  font-weight: 300;
+  color: #ce9797;
+  letter-spacing: 12px;
+}
+
+.container .col-left .title .title-bold {
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: #413a3a;
+}
+
+.container .col-left .title .description {
+  color: #ce9797;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  line-height: 25px;
+}
+
+.container .col-left .input-field {
+  position: relative;
+}
+
+.container .col-left .input-field .input {
+  height: 55px;
+  width: 100%;
+  padding: 0px 30px;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  border: 2px solid #ce9797;
+}
+
+.container .col-left .input-field .input::-webkit-input-placeholder {
+  color: #ce9797;
+  opacity: .7;
+}
+
+.container .col-left .input-field .input:-ms-input-placeholder {
+  color: #ce9797;
+  opacity: .7;
+}
+
+.container .col-left .input-field .input::-ms-input-placeholder {
+  color: #ce9797;
+  opacity: .7;
+}
+
+.container .col-left .input-field .input::placeholder {
+  color: #ce9797;
+  opacity: .7;
+}
+
+.container .col-left .input-field .btn {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  width: 100px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  -webkit-box-shadow: 0 7px 15px #ce9797;
+          box-shadow: 0 7px 15px #ce9797;
+  cursor: pointer;
+  -webkit-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+  z-index: 999;
+}
+
+.container .col-left .input-field .btn:hover {
+  background: #FACECF;
+  -webkit-box-shadow: 0 7px 15px #FACECF;
+          box-shadow: 0 7px 15px #FACECF;
+}
+
+.container .col-left .input-field .icon {
+  position: absolute;
+  right: 112px;
+  bottom: 10px;
+  display: none;
+}
+
+.container .col-left .input-field .error-message {
+  position: absolute;
+  left: 25px;
+  bottom: -25px;
+  font-size: .9rem;
+  color: #f96262;
+}
+
+.container .col-right {
+  width: 100%;
+  height: 100vh;
+}
+
+.container .col-right .col-image {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hero-desktop.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (max-width: 1085px) {
+  .container .col-left {
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    -ms-grid-columns: (minmax(0, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-bottom: 3rem;
+    background: #FFFBFB;
+  }
+  .container .col-left {
+    padding: 0 2rem;
+  }
+  .container .col-left .logo {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .container .col-left .logo img {
+    width: 120px;
+  }
+  .container .col-left .bg-mobile {
+    display: block;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    width: calc(100% + 4rem);
+    margin-bottom: 3rem;
+  }
+  .container .col-left .title {
+    text-align: center;
+  }
+  .container .col-left .title h2 {
+    font-size: 3rem;
+  }
+  .container .col-left .title .description {
+    padding-top: .8rem;
+    padding-bottom: 1.8rem;
+  }
+  .container .col-right {
+    height: 0vh;
+  }
+  .container .col-right .col-image {
+    background: none;
+    display: none;
+  }
+}

@@ -1,0 +1,78 @@
+// Responsive Area
+@media screen and (max-width:885px) {
+    .client-wrapper .share-social-media {
+        right: -20px !important;
+
+        .social-media-inner::before {
+            left: 84% !important;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .card {
+        max-width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+
+        .card-image {
+            width: 100% !important;
+
+            img {
+                max-height: 400px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 0;
+                height: 235px !important;
+            }
+        }
+
+        .card-description {
+            width: 100% !important;
+            padding: 30px !important;
+
+            .card-text h3 {
+                font-size: 1.25rem !important;
+            }
+
+            .client-wrapper .share-social-media {
+                width: 100% !important;
+                right: 0 !important;
+                top: -19px !important;
+
+                .social-media-inner {
+                    position: relative !important;
+                    width: calc(100% + 65px) !important;
+                    height: 75px !important;
+                    left: -32px !important;
+                    right: 0px !important;
+                    bottom: -15px !important;
+                    border-radius: 0 0 10px 10px !important;
+
+                    span {
+                        font-size: 1rem !important;
+                        position: absolute !important;
+                        left: 33px !important;
+                    }
+
+                    i {
+                        font-size: 1.3rem !important;
+                    }
+                }
+
+                .social-media-inner::before {
+                    content: none !important;
+                }
+            }
+        }
+    }
+
+    .share {
+        position: relative !important;
+        z-index: 9999 !important;
+    }
+
+    .active .share {
+        top: 13px !important;
+    }
+}

@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------
+Color Variables
+--------------*/
+/*--------------
+Primary Colors
+--------------*/
+/*--------------
+Neutral Colors
+--------------*/
+* {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fafafa;
+}
+
+/*----------------
+Wrapper Start
+---------------*/
+.wrapper {
+  min-height: 100vh;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 20px;
+  /*------------------
+    Text Wrapper Start
+    ------------------*/
+  /*--------x---------
+    Text Wrapper End
+    ---------x--------*/
+  /*-------------------
+    Card Wrapper Start
+    -------------------*/
+  /*--------x---------
+    Card Wrapper End
+    ---------x--------*/
+}
+
+.wrapper .text-wrapper {
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.wrapper .text-wrapper h2 {
+  font-size: 2rem;
+}
+
+.wrapper .text-wrapper .title-light {
+  font-weight: 200;
+  color: #4c4e61;
+}
+
+.wrapper .text-wrapper .title-bold {
+  font-weight: 600;
+  color: #4c4e61;
+  margin-bottom: 8px;
+}
+
+.wrapper .text-wrapper .description {
+  color: #a3a5ae;
+}
+
+.wrapper .card-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  -ms-grid-rows: (minmax(0, 1fr))[2];
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-gap: 30px;
+  /*-----------
+        Card Start
+        -----------*/
+  /*----x----
+        Card End
+        -----x---*/
+}
+
+.wrapper .card-wrapper .card {
+  min-height: 230px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  border-radius: .35rem;
+  -webkit-box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  scroll-behavior: smooth;
+}
+
+.wrapper .card-wrapper .card .card-text .card-title {
+  font-size: 1.2rem;
+  color: #4c4e61;
+  margin-bottom: 10px;
+}
+
+.wrapper .card-wrapper .card .card-text .card-description {
+  font-size: .9rem;
+  font-weight: 400;
+  color: #a3a5ae;
+}
+
+.wrapper .card-wrapper .card .card-image {
+  text-align: right;
+}
+
+.wrapper .card-wrapper .card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.wrapper .card-wrapper .card-cyan {
+  border-color: #45d3d3;
+}
+
+.wrapper .card-wrapper .card-red {
+  border-color: #ea5353;
+}
+
+.wrapper .card-wrapper .card-orange {
+  border-color: #fcaf4a;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.wrapper .card-wrapper .card-blue {
+  border-color: #549ef2;
+}
+
+.wrapper .card-wrapper .card-cyan,
+.wrapper .card-wrapper .card-blue {
+  position: relative;
+  top: 50%;
+}
+
+/*------x------
+Wrapper End
+-------x-----*/
+/*---------------------
+Responsive Area Start
+---------------------*/
+@media screen and (max-width: 991px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .card-wrapper {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    -ms-grid-rows: (minmax(0, 1fr))[2];
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+    padding: 0 2%;
+  }
+  .wrapper .card-wrapper .card-cyan,
+  .wrapper .card-wrapper .card-blue {
+    top: 0;
+  }
+  .wrapper .card-wrapper .card-orange {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper .text-wrapper {
+    width: 100%;
+    padding: 0 2%;
+  }
+  .wrapper .card-wrapper {
+    -ms-grid-columns: (minmax(0, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .wrapper .card-wrapper .card-orange {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wrapper .card-wrapper {
+    grid-gap: 25px;
+  }
+  .wrapper .text-wrapper h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .wrapper .text-wrapper h2 {
+    font-size: 1.45rem;
+  }
+}
+
+/*---------x----------
+Responsive Area End
+----------x---------*/

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+@import "../sass/reset";
+@import "../sass/variables";
+@import "../sass/colors";
+@import "../sass/responsive";
+
+body {
+    font-family: $font-name;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $light-grayish-blue;
+}
+
+/*-------------
+Card Wrapper
+------------*/
+.card {
+    max-width: 730px;
+    width: 100%;
+    min-height: 295px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background: white;
+    // overflow: hidden;
+}
+
+.card-image {
+    width: 40%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+
+.card-description {
+    width: 60%;
+    padding: 30px;
+
+    .card-text {
+        margin-bottom: 20px;
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $xdk-grayish-blue;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: .87rem;
+            font-weight: 500;
+            color: $dark-blue;
+            line-height: 23px;
+        }
+    }
+
+    .client-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .client {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .client-image {
+                height: 40px;
+                width: 40px;
+                margin-right: 20px;
+                cursor: pointer;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            .client-info {
+                h5 {
+                    color: $xdk-grayish-blue;
+                    font-size: .9rem;
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+
+                span {
+                    font-size: .95rem;
+                    font-weight: 500;
+                    color: $dark-blue;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .share {
+            button {
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                background: $light-grayish-blue;
+                transition: .3s ease;
+
+                i {
+                    font-size: .93rem;
+                    color: $xdk-grayish-blue;
+                    transition: .3s ease;
+                }
+            }
+
+            button:hover,
+            .active {
+                background: $dark-blue;
+                border: none;
+                outline: none;
+
+                i {
+                    color: $light-grayish-blue;
+                }
+            }
+        }
+    }
+
+}
+
+
+.share-social-media {
+    opacity: 0;
+    transition: .3s;
+
+    .social-media-inner {
+        position: relative;
+        width: 250px;
+        height: 50px;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        background: $xdk-grayish-blue;
+        border-radius: 10px;
+        justify-content: center;
+
+        span {
+            font-size: .8rem;
+            letter-spacing: 4.4px;
+            font-weight: 500;
+            color: $grayish-blue;
+            margin-right: 15px;
+        }
+
+        i {
+            font-size: 1.1rem;
+            color: white;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        i:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        i:hover {
+            color: $light-grayish-blue;
+        }
+    }
+
+    .social-media-inner::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        height: 30px;
+        width: 30px;
+        clip-path: polygon(0 0, 100% 0, 53% 43%);
+        background: $xdk-grayish-blue;
+    }
+}
+
+.show {
+    opacity: 1;
+}
+
+.client-wrapper {
+    position: relative;
+
+    .share-social-media {
+        position: absolute;
+        top: -74px;
+        right: -104px;
+        z-index: 999;
+    }
+}
+
+.card {
+    position: relative;
+}
+

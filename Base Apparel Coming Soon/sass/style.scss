@@ -1,0 +1,208 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import "./reset";
+@import "./variables";
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+// Container
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: url('../images/bg-pattern-desktop.svg') no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: .6fr .4fr;
+
+    // Left Column
+    .col-left {
+        width: 650px;
+        padding: 0;
+        padding-left: 5rem;
+        padding-right: 8rem;
+
+        .logo {
+            padding-top: 3rem;
+            padding-bottom: 7rem;
+            cursor: pointer;
+        }
+
+        .bg-mobile {
+            display: none;
+        }
+
+        .title {
+
+            h2 {
+                font-size: 3.5rem;
+                text-transform: uppercase;
+                line-height: 60px;
+            }
+
+            .title-light {
+                font-weight: 300;
+                color: $desat-red;
+                letter-spacing: 12px;
+            }
+
+            .title-bold {
+                font-weight: 600;
+                letter-spacing: 10px;
+                color: $dark-grayish-red;
+            }
+
+            .description {
+                color: $desat-red;
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                line-height: 25px;
+            }
+        }
+
+        .input-field {
+            position: relative;
+
+            .input {
+                height: 55px;
+                width: 100%;
+                padding: 0px 30px;
+                border-radius: 30px;
+                outline: none;
+                font-size: 1rem;
+                border: none;
+                background: transparent;
+                border: 2px solid $desat-red;
+            }
+
+            .input::placeholder {
+                color: $desat-red;
+                opacity: .7;
+            }
+
+
+            .btn {
+                position: absolute;
+                height: 100%;
+                right: 0;
+                width: 100px;
+                border-radius: 30px;
+                border: none;
+                background: linear-gradient(135deg, $gradient-2);
+                box-shadow: 0 7px 15px $desat-red;
+                cursor: pointer;
+                transition: background .3s ease-in-out;
+                z-index: 999;
+
+                &:hover {
+                    background: #FACECF;
+                    box-shadow: 0 7px 15px #FACECF;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                right: 112px;
+                bottom: 10px;
+                display: none;
+            }
+
+            .error-message {
+                position: absolute;
+                left: 25px;
+                bottom: -25px;
+                font-size: .9rem;
+                color: $soft-red;
+            }
+
+        }
+
+    }
+
+    // Right Column
+    .col-right {
+        width: 100%;
+        height: 100vh;
+
+        .col-image {
+            width: 100%;
+            height: 100%;
+            background: url('../images/hero-desktop.jpg') no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+        }
+    }
+
+}
+
+// Responsive Area
+@media screen and (max-width:1085px) {
+    .container {
+        .col-left {
+            width: 100%;
+            padding: 0 3rem;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding-bottom: 3rem;
+        background: #FFFBFB;
+
+        .col-left {
+            padding: 0 2rem;
+
+            .logo {
+                padding-top: 2rem;
+                padding-bottom: 1.5rem;
+
+                img {
+                    width: 120px
+                }
+            }
+
+            .bg-mobile {
+                display: block;
+                margin-left: -2rem;
+                margin-right: -2rem;
+                width: calc(100% + 4rem);
+                margin-bottom: 3rem;
+            }
+
+            .title {
+                text-align: center;
+
+                h2 {
+                    font-size: 3rem;
+                }
+
+                .description {
+                    padding-top: .8rem;
+                    padding-bottom: 1.8rem;
+                }
+            }
+        }
+
+        .col-right {
+            height: 0vh;
+
+            .col-image {
+                background: none;
+                display: none;
+            }
+        }
+    }
+}
